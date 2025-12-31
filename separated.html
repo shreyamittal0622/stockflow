@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body >
+    <header class="main-header">
+        <div class="heading">StockFlow Dashboard</div>
+
+    </header>
+    
+        <nav class="sidebar">
+            <h2 class="logo">MySite</h2>
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+
+                    <input type="checkbox" id="inventory">
+                    <label for="inventory" class="dropdown-btn">Inventory</label>
+
+                    <ul class="dropdown-content">
+                        <li><a href="inventory.html">All Products</a></li>
+                        <li><a href="separated.html">Stock In / Stock Out</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="suppliers.html">Suppliers</a></li>
+                <li><a href="purchase.html">Purchases</a></li>
+                <li><a href="shipment.html">Shipments</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="summary-container">
+
+            <div class="summary-card Opening">
+                <h3>Opening stock</h3>
+                <p id="openStock">0</p>
+            </div>
+
+            <div class="summary-card in-stock">
+                <h3>Total Stock In</h3>
+                <p id="totalIn">0</p>
+            </div>
+
+            <div class="summary-card ouy-stock">
+                <h3>Total Stock Out</h3>
+                <p id="totalOut">0</p>
+            </div>
+
+            <div class="summary-card total-stock">
+                <h3>Total Stock in Inventory</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+        </div>
+        <div class="stock-movement">
+            <div class="box3">
+                <h2>Stock-In</h2>
+                <table class="stock-in">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Date Received</th>
+                            <th>Qty In</th>
+                            <th>Reference</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="text" id="name1" placeholder="item name"></td>
+                            <td><input type="date" id="date1"></td>
+                            <td><input type="number" id="qty1"></td>
+                            <td><input type="text" id="ref1"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div><button type="submit" class="submit-btn">Add</button></div>
+                <div><button type="submit" class="delete-selected-btn">Delete</button></div>
+
+
+            </div>
+            <div class="box3">
+                <h2>Stock-Out</h2>
+                <table class="stock-out">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Date Out</th>
+                            <th>Qty Out</th>
+                            <th>Reference</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><input type="text" id="name2"></td>
+                            <td><input type="date" id="date2"></td>
+                            <td><input type="number" id="qty2"></td>
+                            <td><input type="text" id="ref2"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div><button type="submit" class="submit-btn">Add</button></div>
+                <div><button type="submit" class="delete-selected-btn">Delete</button></div>
+            </div>
+        </div>
+    
+
+
+
+
+</body>
+<script src="separated-script.js"></script>
+
+</html>
