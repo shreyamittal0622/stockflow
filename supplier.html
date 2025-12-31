@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="heading">  StockFlow  </div>
+    </header>
+    <nav class="sidebar">
+        <h2 class="logo">MySite</h2>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+
+                <input type="checkbox" id="inventory">
+                <label for="inventory" class="dropdown-btn">Inventory</label>
+
+                <ul class="dropdown-content">
+                    <li><a href="inventory.html">All Products</a></li>
+                    <li><a href="separated.html">Stock In / Stock Out</a></li>
+                </ul>
+            </li>
+
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="purchase.html">Purchases</a></li>
+            <li><a href="shipment.html">Shipments</a></li>
+
+        </ul>
+    </nav>
+    <div class="box2">
+        <h2>Supplier – Product Record</h2>
+        <form id="supplierForm">
+            <input type="hidden" id="supplier-id">
+            <div class="formfield">
+                <label for="supplierName">Supplier Name</label>
+                <input type="text" id="supplierName" required>
+            </div>
+            <div class="formfield">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" required>
+            </div>
+            <div class="formfield">
+                <label for="productQuantity">Quantity Supplied</label>
+                <input type="number" id="productQuantity" required>
+            </div>
+            <div class="formfield">
+                <label for="contactInfo">Supplier Contact / Details</label>
+                <input type="text" id="contactInfo">
+            </div>
+            <button type="submit">Save</button>
+        </form>
+
+        <table id="supplier-table">
+            <thead>
+                <tr>
+                    <th>Supplier Name</th>
+                    <th>Product Name</th>
+                    <th>Quantity Supplied</th>
+                    <th>Contact Info</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="suppliers-script.js"></script>
+
+</body>
+
+</html>
