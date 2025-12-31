@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+        <header class="main-header">
+        <div class="heading">StockFlow Dashboard</div>
+        
+    </header>
+    <div class="full">
+    <nav class="sidebar">
+    <h2 class="logo">MySite</h2>
+    <ul class="nav-links">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            
+            <input type="checkbox" id="inventory">
+            <label for="inventory" class="dropdown-btn">Inventory</label>
+
+            <ul class="dropdown-content">
+                <li><a href="inventory.html">All Products</a></li>
+                <li><a href="separated.html">Stock In / Stock Out</a></li>
+            </ul>
+        </li>
+
+        <li><a href="suppliers.html">Suppliers</a></li>
+        <li><a href="purchase.html">Purchases</a></li>
+        <li><a href="shipment.html">Shipments</a></li>
+
+    </ul>
+</nav>
+    <div class="box2">
+        <div>
+            <h2>Product Management</h2>
+        </div>
+        <form id="product-form">
+            <input type="hidden" id="product-id" value="" />
+
+            <div class="formfield">
+                <label for="name">product name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="formfield">
+                <label for="quantity">quantity</label>
+                <input type="number" id="quantity" required>
+            </div>
+            <div class="formfield">
+                <label for="threshold">Low-Stock threshold</label>
+                <input type="number" id="threshold" min="0">
+            </div>
+            <div>
+                <button type="submit" id="submit-btn">Save</button>
+                <button type="button" id="cancel-btn" style="display:none">Cancel</button>
+            </div>
+
+        </form>
+        <table id="products-table" class="products-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Threshold</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+
+    </div></div>
+    
+    <script type="module" src="inventory-script.js"></script>
+
+</body>
+
+</html>
