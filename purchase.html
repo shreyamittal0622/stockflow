@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="purchase">
+    <header class="main-header">
+        <div class="heading">StockFlow Dashboard</div>
+
+    </header>
+    <nav class="sidebar">
+        <h2 class="logo">MySite</h2>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+
+                <input type="checkbox" id="inventory">
+                <label for="inventory" class="dropdown-btn">Inventory</label>
+
+                <ul class="dropdown-content">
+                    <li><a href="inventory.html">All Products</a></li>
+                    <li><a href="separated.html">Stock In / Stock Out</a></li>
+                </ul>
+            </li>
+
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="purchase.html">Purchases</a></li>
+            <li><a href="shipment.html">Shipments</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="box">
+
+        <table class="purchase-table">
+            <thead>
+                <tr>
+                    <th>ITEM DETAILS</th>
+                    <th>QTY</th>
+                    <th>RATE</th>
+                    <th>AMOUNT</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr class="purchase-input">
+                    <td><input type="text" id="item" placeholder="Item Name"></td>
+                    <td><input type="number" id="qty" placeholder="Quantity"></td>
+                    <td><input type="number" id="rate" placeholder="Rate"></td>
+                </tr>
+
+
+            </tfoot>
+
+        </table>
+        <div><button type="submit" class="submit-btn">Add</button></div>
+        <div><button type="submit" class="delete-selected-btn">Delete</button></div>
+
+    </div>
+    <script src="purchase-script.js"></script>
+
+
+</body>
+
+</html>
